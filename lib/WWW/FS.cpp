@@ -10,7 +10,7 @@ char* currentFileName;
  *
  * @param array Array containing the measures
  */
-void saveMeasures(String* array) {
+void saveMeasures(int* array) {
 
 }
 
