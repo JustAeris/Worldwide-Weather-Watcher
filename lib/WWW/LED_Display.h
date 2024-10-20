@@ -3,6 +3,6 @@
 
 void refreshLED(char current_mode, char error_code);
 
-void setColor(int red, int green, int blue);
+static void setColor(int red, int green, int blue);
 
 #endif //LED_DISPLAY_H
