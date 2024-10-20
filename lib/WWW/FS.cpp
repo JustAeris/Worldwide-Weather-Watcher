@@ -10,7 +10,7 @@ char* currentFileName;
  *
  * @param array Array containing the measures
  */
-void saveMeasures(int* array) {
+void saveMeasures(String* array) {
 
 }
 
@@ -21,7 +21,7 @@ void saveMeasures(int* array) {
  * @param fileName Name of the file
  * @param directory Directory where the file will be saved
  */
-void writeData(int* array, const char* fileName, const char* directory) {
+void writeData(String* array, String* fileName, String* directory) {
 
 }
 
@@ -32,7 +32,7 @@ void writeData(int* array, const char* fileName, const char* directory) {
  * @param fileName Name of the file
  * @param directory Directory where the file is saved
  */
-void readData(int* array, const char* fileName, const char* directory) {
+void readData(String* array, String* fileName, String* directory) {
 
 }
 
