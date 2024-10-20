@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <HardwareSerial.h>
 #include "../lib/WWW/Sensors.h"
 #include "../lib/WWW/FS.h"
 #include "../lib/WWW/LED_Display.h"
