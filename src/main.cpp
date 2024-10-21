@@ -40,21 +40,21 @@ void loop() {
 
         if (currentMillis - LAST_LOG_TIME >= interval * 60000) {
 
-            Result measures[5];
-            getData(measures);
+            Result measures;
+            getData(&measures);
 
             if (CURRENT_MODE == CONFIGURATION_MODE) {
                 // Print the measures
                 Serial.print("Luminosity:   ");
-                Serial.println(measures->luminosity);
+                Serial.println(measures.luminosity);
                 Serial.print("Temperature:  ");
-                Serial.println(measures->temperature);
+                Serial.println(measures.temperature);
                 Serial.print("Humidity:     ");
-                Serial.println(measures->humidity);
+                Serial.println(measures.humidity);
                 Serial.print("Pressure:     ");
-                Serial.println(measures->pressure);
+                Serial.println(measures.pressure);
                 Serial.print("GPS:          ");
-                Serial.println(measures->gps);
+                Serial.println(measures.gps);
             }
             else {
                 noInterrupts();
