@@ -7,7 +7,6 @@ typedef struct Result {
     int humidity;
     int pressure;
     float gps;
-    int date_time;
 } Result;
 
 void getData(Result *array);
