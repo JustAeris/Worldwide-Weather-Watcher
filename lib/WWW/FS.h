@@ -1,8 +1,9 @@
 #ifndef FS_H
 #define FS_H
 #include <Arduino.h>
+#include <Sensors.h>
 
-void saveMeasures(int* array);
+void saveMeasures(Result* array);
 
 void writeData(String* array, String* fileName, String* directory);
 void readData(String* array, String* fileName, String* directory);

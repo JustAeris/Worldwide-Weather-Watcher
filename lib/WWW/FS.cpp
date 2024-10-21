@@ -1,5 +1,6 @@
 #include "FS.h"
 #include <SD.h>
+#include <Sensors.h>
 
 
 int lastKnowDateTime[5];
@@ -10,7 +11,7 @@ char* currentFileName;
  *
  * @param array Array containing the measures
  */
-void saveMeasures(int* array) {
+void saveMeasures(Result* array) {
 
 }
 

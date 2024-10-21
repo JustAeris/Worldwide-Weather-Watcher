@@ -1,7 +1,16 @@
 #ifndef SENSORS_H
 #define SENSORS_H
 
-void getData(int *array);
+typedef struct Result {
+    int luminosity;
+    int temperature;
+    int humidity;
+    int pressure;
+    float gps;
+    int date_time;
+} Result;
+
+void getData(Result *array);
 
 int getLuminosity();
 int getTemperature();

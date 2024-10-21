@@ -5,7 +5,7 @@
  *
  * @param[out] array Buffer array to store the data
  */
-void getData(int *array) {
+void getData(Result *array) {
 
 }
 
