@@ -6,8 +6,6 @@
 #include "../lib/WWW/Settings.h"
 
 
-Configuration config;
-
 #define STANDARD_MODE 0
 #define ECO_MODE 1
 #define MAINTENANCE_MODE 2
@@ -31,7 +29,6 @@ unsigned long LAST_LOG_TIME = 0;
 void setup() {
     Wire.begin();
     Serial.begin(9600);
-    loadSettingsFromEEPROM(&config);
 }
 
 
@@ -39,7 +36,7 @@ void loop() {
     unsigned long currentMillis = millis();
 
     if (CURRENT_MODE != MAINTENANCE_MODE) {
-        unsigned long interval = CURRENT_MODE == ECO_MODE ? config.LOG_INTERVAL * 2 : config.LOG_INTERVAL;
+        unsigned long interval = CURRENT_MODE == ECO_MODE ? Configuration::LOG_INTERVAL() * 2 : Configuration::LOG_INTERVAL();
 
         if (currentMillis - LAST_LOG_TIME >= interval * 60000) {
 
