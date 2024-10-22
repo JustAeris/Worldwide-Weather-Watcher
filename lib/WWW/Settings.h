@@ -54,7 +54,7 @@ class Configuration {
         static int MAX_FILE_SIZE();
 };
 
-int tryUpdateSetting(String* input);
+bool tryUpdateSetting(const String * input);
 
 void resetSettings();
 

@@ -4,10 +4,46 @@
 /**
  * @brief Tries to update a setting
  * @param input Console input
- * @return 1 on success, 0 on failure
+ * @return True on success, false on failure
  */
-int tryUpdateSetting(String* input) {
-    return 1;
+bool tryUpdateSetting(const String * input) {
+    const int separatorIndex = input->indexOf('=');
+    const int value = static_cast<int>(input->substring(separatorIndex + 1).toInt());
+    const String key = input->substring(0, input->indexOf('='));
+
+    if (key == "LUMIN") {
+        EEPROM.put(LUMIN_ADDRESS, static_cast<byte>(value));
+    } else if (key == "LUMIN_LOW") {
+        EEPROM.put(LUMIN_LOW_ADDRESS, value);
+    } else if (key == "LUMIN_HIGH") {
+        EEPROM.put(LUMIN_HIGH_ADDRESS, value);
+    } else if (key == "TEMP_AIR") {
+        EEPROM.put(TEMP_AIR_ADDRESS, static_cast<byte>(value));
+    } else if (key == "MIN_TEMP_AIR") {
+        EEPROM.put(MIN_TEMP_AIR_ADDRESS, static_cast<char>(value));
+    } else if (key == "MAX_TEMP_AIR") {
+        EEPROM.put(MAX_TEMP_AIR_ADDRESS, static_cast<char>(value));
+    } else if (key == "HYGR") {
+        EEPROM.put(HYGR_ADDRESS, static_cast<byte>(value));
+    } else if (key == "HYGR_MINT") {
+        EEPROM.put(HYGR_MINT_ADDRESS, static_cast<char>(value));
+    } else if (key == "HYGR_MAXT") {
+        EEPROM.put(HYGR_MAXT_ADDRESS, static_cast<char>(value));
+    } else if (key == "PRESSURE") {
+        EEPROM.put(PRESSURE_ADDRESS, static_cast<byte>(value));
+    } else if (key == "PRESSURE_MIN") {
+        EEPROM.put(PRESSURE_MIN_ADDRESS, value);
+    } else if (key == "PRESSURE_MAX") {
+        EEPROM.put(PRESSURE_MAX_ADDRESS, value);
+    } else if (key == "LOG_INTERVAL") {
+        EEPROM.put(LOG_INTERVAL_ADDRESS, static_cast<byte>(value));
+    } else if (key == "MAX_FILE_SIZE") {
+        EEPROM.put(MAX_FILE_SIZE_ADDRESS, value);
+    } else {
+        return false;
+    }
+
+    return true;
 }
 
 /**
