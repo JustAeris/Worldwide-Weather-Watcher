@@ -1,12 +1,17 @@
 #ifndef SENSORS_H
 #define SENSORS_H
 
+typedef struct Coords {
+    float latitude;
+    float longitude;
+} Coords;
+
 typedef struct Result {
     int luminosity;
     float temperature;
     int humidity;
     int pressure;
-    float gps;
+    Coords gps;
 } Result;
 
 void getData(Result *array);
@@ -15,7 +20,7 @@ int getLuminosity();
 float getTemperature();
 int getHumidity();
 int getPressure();
-float getGPS();
+Coords getGPS();
 int getDateTime();
 
 #endif //SENSORS_H

@@ -51,9 +51,10 @@ int getPressure() {
  * @param ecoMode Is eco mode enabled
  * @return float GPS data
  */
-float getGPS(char ecoMode = 0) {
-    static float gps = 0;
-    return 0;
+Coords getGPS(char ecoMode = 0) {
+    static float pulledinEco = 0;
+    Coords coords;
+    return coords;
 }
 
 /**
