@@ -1,4 +1,5 @@
 #include "Settings.h"
+#include <EEPROM.h>
 
 /**
  * @brief Tries to update a setting
@@ -21,7 +22,9 @@ void resetSettings() {
  * @return Luminance setting as a byte
  */
 byte Configuration::LUMIN() {
-    return 0;
+    byte res;
+    EEPROM.get(LUMIN_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -29,7 +32,9 @@ byte Configuration::LUMIN() {
  * @return Low luminance setting as an int
  */
 int Configuration::LUMIN_LOW() {
-    return 0;
+    int res;
+    EEPROM.get(LUMIN_LOW_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -37,7 +42,9 @@ int Configuration::LUMIN_LOW() {
  * @return High luminance setting as an int
  */
 int Configuration::LUMIN_HIGH() {
-    return 0;
+    int res;
+    EEPROM.get(LUMIN_HIGH_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -45,7 +52,9 @@ int Configuration::LUMIN_HIGH() {
  * @return Air temperature setting as a byte
  */
 byte Configuration::TEMP_AIR() {
-    return 0;
+    byte res;
+    EEPROM.get(TEMP_AIR_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -53,7 +62,9 @@ byte Configuration::TEMP_AIR() {
  * @return Minimum air temperature setting as a char
  */
 char Configuration::MIN_TEMP_AIR() {
-    return 0;
+    char res;
+    EEPROM.get(MIN_TEMP_AIR_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -61,7 +72,9 @@ char Configuration::MIN_TEMP_AIR() {
  * @return Maximum air temperature setting as a char
  */
 char Configuration::MAX_TEMP_AIR() {
-    return 0;
+    char res;
+    EEPROM.get(MAX_TEMP_AIR_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -69,7 +82,9 @@ char Configuration::MAX_TEMP_AIR() {
  * @return Humidity setting as a byte
  */
 byte Configuration::HYGR() {
-    return 0;
+    byte res;
+    EEPROM.get(HYGR_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -77,7 +92,9 @@ byte Configuration::HYGR() {
  * @return Minimum humidity setting as a char
  */
 char Configuration::HYGR_MINT() {
-    return 0;
+    char res;
+    EEPROM.get(HYGR_MINT_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -85,7 +102,9 @@ char Configuration::HYGR_MINT() {
  * @return Maximum humidity setting as a char
  */
 char Configuration::HYGR_MAXT() {
-    return 0;
+    char res;
+    EEPROM.get(HYGR_MAXT_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -93,7 +112,9 @@ char Configuration::HYGR_MAXT() {
  * @return Pressure setting as a byte
  */
 byte Configuration::PRESSURE() {
-    return 0;
+    byte res;
+    EEPROM.get(PRESSURE_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -101,7 +122,9 @@ byte Configuration::PRESSURE() {
  * @return Minimum pressure setting as an int
  */
 int Configuration::PRESSURE_MIN() {
-    return 0;
+    int res;
+    EEPROM.get(PRESSURE_MIN_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -109,7 +132,9 @@ int Configuration::PRESSURE_MIN() {
  * @return Maximum pressure setting as an int
  */
 int Configuration::PRESSURE_MAX() {
-    return 0;
+    int res;
+    EEPROM.get(PRESSURE_MAX_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -117,7 +142,9 @@ int Configuration::PRESSURE_MAX() {
  * @return Log interval setting as a byte
  */
 byte Configuration::LOG_INTERVAL() {
-    return 0;
+    byte res;
+    EEPROM.get(LOG_INTERVAL_ADDRESS, res);
+    return res;
 }
 
 /**
@@ -125,5 +152,7 @@ byte Configuration::LOG_INTERVAL() {
  * @return Maximum file size setting as an int
  */
 int Configuration::MAX_FILE_SIZE() {
-    return 0;
+    byte res;
+    EEPROM.get(MAX_FILE_SIZE_ADDRESS, res);
+    return res;
 }
