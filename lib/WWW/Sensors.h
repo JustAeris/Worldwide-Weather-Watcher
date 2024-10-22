@@ -20,7 +20,7 @@ int getLuminosity();
 float getTemperature();
 int getHumidity();
 int getPressure();
-Coords getGPS();
+Coords getGPS(char ecoMode);
 int getDateTime();
 
 #endif //SENSORS_H
