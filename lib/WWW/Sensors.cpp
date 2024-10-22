@@ -23,7 +23,7 @@ int getLuminosity() {
  *
  * @return int Temperature data
  */
-int getTemperature() {
+float getTemperature() {
     return 0;
 }
 

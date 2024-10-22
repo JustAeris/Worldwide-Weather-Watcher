@@ -3,7 +3,7 @@
 
 typedef struct Result {
     int luminosity;
-    int temperature;
+    float temperature;
     int humidity;
     int pressure;
     float gps;
@@ -12,7 +12,7 @@ typedef struct Result {
 void getData(Result *array);
 
 int getLuminosity();
-int getTemperature();
+float getTemperature();
 int getHumidity();
 int getPressure();
 float getGPS();
