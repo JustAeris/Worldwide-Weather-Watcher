@@ -58,7 +58,7 @@ void loop() {
             }
             else {
                 noInterrupts();
-                saveMeasures(measures);
+                saveMeasures(&measures);
                 interrupts();
             }
 
