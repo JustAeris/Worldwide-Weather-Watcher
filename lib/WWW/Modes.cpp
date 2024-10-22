@@ -4,6 +4,8 @@
 #include <Settings.h>
 #include "Arduino.h"
 
+unsigned long LAST_INTERACTION_TIME = 0;
+unsigned long LAST_LOG_TIME = 0;
 
 /**
  * @brief Main working function
@@ -52,7 +54,7 @@ void configuration() {
         else
             Serial.println("Setting update failed");
 
-        LAST_INTERACTION_TIME = currentMillis();
+        LAST_INTERACTION_TIME = currentMillis;
     }
 
     if (currentMillis - LAST_INTERACTION_TIME >= IDLE_TIME_TO_MAINTENANCE) {

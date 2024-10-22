@@ -12,6 +12,7 @@
 #define SD_FULL_ERROR 5
 #define SD_ACCESS_ERROR 6
 char ERROR_CODE = NO_ERRORS;
+char CURRENT_MODE = STANDARD_MODE;
 
 
 void setup() {
